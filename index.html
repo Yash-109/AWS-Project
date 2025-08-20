@@ -3,62 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Attractive Web Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            text-align: center;
             margin: 0;
-            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
+
+        /* Navbar */
+        nav {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #4CAF50, #45a049);
             color: white;
         }
-        main {
-            padding: 20px;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
-        button {
-            background-color: #4CAF50;
+        .hero button {
+            padding: 12px 25px;
+            font-size: 1rem;
             border: none;
-            padding: 10px 20px;
-            color: white;
+            border-radius: 25px;
+            background: white;
+            color: #4CAF50;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
+            transition: 0.3s;
         }
-        button:hover {
-            background-color: #45a049;
+        .hero button:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Yash Website</h1>
-    </header>
 
-    <main>
-        <p>This is a sample index.html page.</p>
-        <button onclick="sayHello()">Click Me</button>
-    </main>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">🌐 My Website</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Building beautiful and responsive web pages with HTML & CSS</p>
+        <button onclick="alert('Thanks for clicking!')">Get Started</button>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards">
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML">
+            <h3>HTML</h3>
+            <p>Structure your web content with ease using HTML.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS">
+            <h3>CSS</h3>
+            <p>Style your web pages and make them visually stunning.</p>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JS">
+            <h3>JavaScript</h3>
+            <p>Add interactivity and dynamic features to your site.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <p>&copy; 2025 My Website | Made with ❤️</p>
     </footer>
 
-    <script>
-        function sayHello() {
-            alert("Hello! Thanks for visiting my website.");
-        }
-    </script>
 </body>
 </html>
